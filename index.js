@@ -19,9 +19,15 @@
 const express = require( 'express' );
 const forgeProxy =require ( './forge-proxy' );
 
-const app =express () ;
-app.get( '/forge-proxy/*', forgeProxy.get );
+const app = express ();
 
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
+
+app.get( '/forge-proxy/*', forgeProxy.get );
 app.set( 'port', process.env.PORT || 8085 );
 
 const server = app.listen( app.get( 'port' ), function() {
