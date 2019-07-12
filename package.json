@@ -1,14 +1,14 @@
 {
-  "name": "adsk-lmv-proxy",
+  "name": "forge-proxy-server",
   "version": "1.0.0",
-  "description": "",
+  "description": "This sample is demonstrating how to host a proxy server to forward all requests from the Forge Viewer to this backend without showing access token in your viewer frontend",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "yiskang <eason.kang@autodesk.com>",
+  "license": "MIT",
   "dependencies": {
     "express": "^4.17.1",
     "forge-apis": "^0.4.5"
