@@ -50,9 +50,9 @@ function fixContentHeaders( req, res ) {
 }
 
 function setCORSHeaders( res ) {
-	res.set( 'access-control-allow-origin', '*' );
-	res.set( 'access-control-allow-credentials', false );
-	res.set( 'access-control-allow-headers', 'Origin, X-Requested-With, Content-Type, Accept' );
+	res.set( 'Access-Control-Allow-Origin', '*' );
+	res.set( 'Access-Control-Allow-Credentials', false );
+	res.set( 'Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept' );
 }
 
 function proxyClientHeaders( clientHeaders, upstreamHeaders ) {
